@@ -45,16 +45,17 @@
     margin: 10px 0;
   }
   
-  router-link {
+  a {
     color: black; 
     text-decoration: none; 
   }
   
-  router-link:hover {
-    text-decoration: underline;
+  a:hover {
+    text-decoration: underline; 
   }
-  a {
-    color: black; 
+
+  router-link {
+    color: black;
     text-decoration: none; 
   }
   </style>

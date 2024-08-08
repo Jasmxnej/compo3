@@ -13,29 +13,29 @@ const apiClient = axios.create({
 
 
 export default {
-  // Function to fetch a list of passengers
+  //list of passengers
   getEvents(size: number, page: number) {
     return apiClient.get('/passenger', {
       params: {
         size: size,
-        page: page - 1, // Adjust for 0-based page index used by the API
+        page: page - 1, 
       },
     }).then(response => response.data);
   },
 
-  // Function to fetch a single passenger by ID
+  // passenger by ID
   getEvent(id: string) {
     return apiClient.get(`/passenger/${id}`)
       .then(response => response.data);
   },
 
-  // Function to fetch a list of airlines
+  // list of airlines
   getAirlines() {
     return apiClient.get('/airlines')
       .then(response => response.data);
   },
 
-  // Function to fetch a single airline by ID
+  // airline by ID
   getAirline(id: string) {
     return apiClient.get(`/airlines/${id}`)
       .then(response => response.data);
